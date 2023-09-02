@@ -1,11 +1,5 @@
 package com.uwoobeat.discordbot;
 
-import com.uwoobeat.discordbot.discord.listener.CustomDiscordListener;
-import com.uwoobeat.discordbot.global.utils.DiscordTokenUtil;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
