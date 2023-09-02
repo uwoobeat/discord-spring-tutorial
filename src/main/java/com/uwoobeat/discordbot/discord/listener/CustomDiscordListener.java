@@ -15,16 +15,16 @@ public class CustomDiscordListener extends ListenerAdapter {
         User author = event.getAuthor();
         TextChannel channel = event.getChannel().asTextChannel();
         Message message = event.getMessage();
+        String content = message.getContentRaw(); // get only textual content of message
 
         log.info("Message from {} in {}: {}", author.getName(), channel.getName(), message.getContentDisplay());
 
-        if (author.isBot()) {
-            return;
-        }
+        if (author.isBot()) return;
 
-        if (message.getContentRaw().equals("!ping")) {
-            log.info("ping command received");
+        if (content.equals("!ping")) {
             channel.sendMessage("Pong!").queue();
         }
+
+
     }
 }
