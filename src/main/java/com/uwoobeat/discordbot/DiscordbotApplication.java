@@ -14,12 +14,6 @@ public class DiscordbotApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DiscordbotApplication.class, args);
-
-		JDA jda = JDABuilder.createDefault(DiscordTokenUtil.token)
-				.setActivity(Activity.playing("with JDA"))
-				.enableIntents(GatewayIntent.MESSAGE_CONTENT)
-				.addEventListeners(new CustomDiscordListener())
-				.build();
 	}
 
 }
